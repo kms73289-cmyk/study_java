@@ -19,16 +19,34 @@ public class Ex2_work {
 
         Scanner sc = new Scanner(System.in);
         System.out.print("단 : ");
-        int m = sc.nextInt();
-
-        if (m >= 1 && m <= 9) {
+        int dan = sc.nextInt();
+        
+        /* 내 답
+        if (dan >= 1 && dan <= 9) {
 
             for (int i = 1; i <= 9; i++) {
-                System.out.println(m + " * " + i + " = " + (m * i));
+                System.out.println(dan + " * " + i + " = " + (dan * i));
             }
             
         }else{
             System.out.println("2 ~ 9 사이의 값을 입력하세요");
+        }
+        
+        */
+        
+
+        //답
+        if( dan <= 1 || dan >= 10){
+        
+            System.out.println(" 2 ~ 9 사이의 값을 입력하세요");
+        
+        }else{
+            
+            for( int i = 1; i <= 9; i++){
+
+                //System.out.println( dan + " * " + i + " = " + (dan * i));
+                System.out.printf("%d * %d = %02d\n", dan, i, dan*i);
+            }
         }
 
     }// main
