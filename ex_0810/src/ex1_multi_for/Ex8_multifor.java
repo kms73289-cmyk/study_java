@@ -10,7 +10,7 @@ public class Ex8_multifor {
                .......
         10 1 2 3 4 5 6 7 8 9
         */
-
+        /* 
         for( int i = 1; i <= 10; i++){
 
             for(int j = i; j < 10+i; j++){
@@ -21,12 +21,27 @@ public class Ex8_multifor {
                     System.out.print(j + " " );
                 }
                 
+            }//inner
+            System.out.println();
+        }//outer
+        */
+
+        for(int i = 1; i <= 10; i++){
+
+            for(int j = 0; j < 10; j++){
+
+                int num = i + j;
+
+                if( num > 10 )                    
+                    num -= 10;
+
+                
+                System.out.print(num + " ");
 
 
             }//inner
             System.out.println();
         }//outer
-
     }//main
     
 }//class

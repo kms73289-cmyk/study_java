@@ -4,7 +4,7 @@ public class Ex7_multifor {
     public static void main(String[] args) {
         
         // 2 x 1 = 2  3 x 1 = 3  4 x 1 = 4  .... 9 x 1 = 9
-        //...
+        // ...
         // 2 x 9 = 18 3 x 9 = 27
         
         for(int i = 1; i <= 9; i++){

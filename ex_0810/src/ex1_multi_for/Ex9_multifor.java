@@ -10,9 +10,9 @@ public class Ex9_multifor {
           * * * * * * * 
         * * * * * * * * * 
         
-    */
+       */
         
-        
+        /* 
         for( int i = 1; i <= 5; i++){
 
             for( int j = 1; j <= 9 ; j++){
@@ -30,6 +30,22 @@ public class Ex9_multifor {
             
             System.out.println();
         }//outer
+        */
+
+        for(int i = 0; i < 5; i++){
+
+            for(int j = 0; j < 5 + i; j++){
+
+                if( i + j > 3)
+                    System.out.print("* ");
+                else
+                    System.out.print("  ");
+
+
+            }//inner
+            System.out.println();
+        }//outer
+        
     }//main
     
 }//class
