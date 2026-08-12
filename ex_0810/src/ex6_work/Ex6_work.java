@@ -13,20 +13,18 @@ public class Ex6_work {
 
         Scanner sc = new Scanner(System.in);
         System.out.print("입력 : ");
-        int n =sc.nextInt();
-        int a = 1;
-        int b = 0;
-        
-        
+        int cnt =sc.nextInt();
+        int n1 = 1;
+        int n2 = 0;
+        int n3 = 0;
 
-        for(int i = 1; i <= n;i++ ){
+        for(int i = 0; i < cnt; i++ ){
+    
+            n2 = n3;
+            n3 = n1;
+            n1 = n2 + n3;
+            System.out.print( n3 + " ");
             
-            
-            b+=a;
-            System.out.print( (a+b) + " ");
-            a=b;
-
-
         }
 
     }//main

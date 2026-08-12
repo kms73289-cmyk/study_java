@@ -17,14 +17,35 @@ public class Ex4_work {
         System.out.print("수2 : ");
         int su2 = sc.nextInt();
         
-        for(int i = su1; i>= 1; i--){
+        if( su1 > su2 ){
+          int su3 = su1;
+          su1 = su2;
+          su2 = su3;
+        }
+
+        int i = su1;
+
+        for(; i>= 1; i--){
 
            if( su1 % i == 0 && su2 % i ==0){
-             System.out.println("최대공약수 : " + i);
              break;
            }
             
-        }//outer
+        }//for
+        System.out.println("최대공약수 : " + i);
+
+        System.out.println("-------------------");
+
+        //유클리드 호제법으로 최대공약수 구하기
+        while( su2 != 0){
+
+          int tmp = su1 % su2;
+          su1 = su2;
+          su2 = tmp;
+
+        }//while
+
+        System.out.println("최대공약수 : " + su1);
     }//main
     
 }//class
