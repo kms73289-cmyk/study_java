@@ -11,21 +11,23 @@ public class Ex09_work {
         //17 2 45 27 9 11
 
         int[] lotto = new int[6];
-        
 
-        for(int i = 0; i < lotto.length; i++){
-
-            int r = new Random().nextInt(45)+1;
-            for(int j = 0; j < i; j++){
-                if(r = lotto[j]){
-                    --i;
-                }
-                    
-            }
-        
-            lotto[i]=r;
+        outer : for(int i = 0; i < lotto.length; ){
             
-        }System.out.println();
-    }
+            lotto[i] = new Random().nextInt(45) + 1;
+
+            //중복값 비교
+            for( int j = 0; j < i; j++ ){
+
+                if( lotto[i] == lotto[j]){
+                    continue outer;
+                }
+
+            }//inner
+
+            System.out.print(lotto[i] + " ");            
+            i++;
+        }
+    }//main
     
-}
+}//class

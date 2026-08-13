@@ -16,20 +16,36 @@ public class Ex08_work {
         
         int[] coin = { 500, 100, 50, 10};
         
-        int r = new Random().nextInt(5000 - 10 +1) + 10;
+        /*int money = new Random().nextInt(5000 - 10 +1) + 10;
 
-        if(r % 10 != 0){
+        if(money % 10 != 0){
             int n = r % 10;
-            r -= n; 
+            money -= n; 
         }System.out.println("금액 : " + r);
 
        int w = 0;
 
         for( int i = 0; i < coin.length; i++){
 
-            w = r / coin[i];
-            r -= w*coin[i];
+            w = money / coin[i];
+            money -= w*coin[i];
             System.out.printf("%d원 : %d\n",coin[i],w);
+        }
+        */
+       //중요
+        int money = new Random().nextInt(500) + 1;
+        money *= 10;
+
+        System.out.println("금액 : "+ money);
+
+        for( int i = 0; i < coin.length; i++){
+
+            int res = money / coin[i];
+
+            if( res > 0 ){
+                System.out.printf("%d원 : %d개\n", coin[i], res);
+                money %= coin[i];
+            }
         }
 
         
