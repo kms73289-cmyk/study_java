@@ -17,13 +17,15 @@ public class Ex2_work {
                              {"[조인성]","모가디슈", "호프"},
                              {"[이병헌]", "레드", "광해", "놈놈놈"} };
 
+
+        int cnt = 0;
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("검색 : ");
+        System.out.print("검색 : ");
         String name = sc.next();
 
-        for(int i =0 ;i < actor.length; i++){
-        
-        }
+        Ex2_sub sub = new Ex2_sub();
+        sub.findActor(actor, name, cnt);
 
     }//main
     

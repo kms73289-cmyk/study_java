@@ -14,15 +14,27 @@ public class Ex1_work {
         //abc은(는) 회문이 아닙니다
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("입력 : ");
-        String in = sc.next();
-
-         for(int i = 0; i < in.length(); i++){
+        System.out.print("입력 : ");
         
-            
-            
-            
-        }
+        //원본
+        String str = sc.next();
+
+        StringBuffer sb = new StringBuffer(str);
+
+        //원본을 뒤집어서 저장할 객체
+        // String rev = "";
+        String rev = sb.reverse().toString();
+
+        // for( int i = str.length()-1; i >= 0; i--){
+        //     rev += str.charAt(i);
+        // }
+
+        //String ==은 equals로
+         if(str.equals( rev )){
+            System.out.println(str + "은 회문");
+         }else{
+            System.out.println(str + "은 안회문");
+         }
     }//main
     
 }
