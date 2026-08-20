@@ -15,12 +15,22 @@ public class UpdownMain {
         //Up
         //정수 : 25
         //3회 만에 정답
-        int r = new Random().nextInt(50)+1;
+        
         
 
-            
+        Scanner sc = new Scanner(System.in);
+        int select = 0;
+        boolean check = false;
 
-        UpdownSub uds = new UpdownSub();
-        uds.Updown(r);
+        UpdownSub us = new UpdownSub();
+
+        do{
+
+            System.out.print("정수 : ");
+            select = sc.nextInt();
+            check = us.check(select);
+
+        }while( check );//check == true
+
     }//main 
 }//class
