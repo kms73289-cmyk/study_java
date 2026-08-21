@@ -13,22 +13,19 @@ public class Graph {
         //...
         //9의 갯수 : ########## 10
 
-        GraphSub gs = new GraphSub();
-        int cnt[] = new int[10];
         
 
-        for(int i = 0; i < 100; i++){
-            int num = new Random().nextInt(10)+ 0;
-                    cnt[num]++;
-                    
-            
-        }
+        int[] arr = new int[10];
 
-        for(int i = 0; i < 10; i++){
-            System.out.println(i + "의 갯수 : " + cnt[i]);
+        Random rnd = new Random();
 
+        for(int i=0; i < 100; i++){
+            int r = rnd.nextInt(10);
+            arr[r]++;
         }
-        
+         
+        PrintGraph pg = new PrintGraph();
+        pg.print(arr);
 
     }//main
     
