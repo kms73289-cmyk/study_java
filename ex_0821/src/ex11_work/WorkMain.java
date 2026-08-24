@@ -11,9 +11,32 @@ public class WorkMain {
         // ealpp오답
         // >>apple
         // apple정답!
-        String[] strArr = { "APPLE", "ORANGE", "HOPE", "VIEW" };
+        
+        WorkSub ws = new WorkSub();
+
+        //정답단어
+        String answer = ws.getAnswer();
+
+        //정답을 섞어서 문제로 만들기
+        String question = ws.scrambleWord( answer );
 
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("문제 : " + question);
+
+        while(true){
+            System.out.println(">> ");
+            String str = sc.next();
+
+            if( str.equalsIgnoreCase( answer )){
+                System.out.println(str + "은 정답입니다");
+                break;
+            }else{
+                System.out.println(str + "은 오답입니다");
+            }
+        }
+
+        /* Scanner sc = new Scanner(System.in);
 
         int n = new Random().nextInt(4);
 
@@ -41,8 +64,8 @@ public class WorkMain {
                 System.out.println("정답");
                 break;
             } else
-                System.out.println("오답");
-        }
+                System.out.println("오답")}
+        */ 
 
     }// main
 
